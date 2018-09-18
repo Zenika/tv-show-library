@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
     <ul class="navbar__nav-links">
-      <li>Home</li>
-      <li>Favorites</li>
+      <a href="#" class="navbar__link-item">Home</a> |
+      <a href="#" class="navbar__link-item">Favorites</a>
     </ul>
     <div class="navbar__search">
       <input type="text" placeholder="search...">
@@ -31,8 +31,10 @@ export default {
   padding: 0;
 }
 
-.navbar__nav-links li {
+.navbar__link-item {
   padding: 0 10px;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar__search {
