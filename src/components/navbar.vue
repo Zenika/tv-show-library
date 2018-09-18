@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
     <ul class="navbar__nav-links">
-      <a href="#" class="navbar__link-item">Home</a> |
-      <a href="#" class="navbar__link-item">Favorites</a>
+      <router-link class="navbar__link-item" to="/">Home</router-link> |
+      <router-link class="navbar__link-item" to="/favorites">Favorites</router-link>
     </ul>
   </div>
 </template>
