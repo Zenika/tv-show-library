@@ -11,7 +11,12 @@
 </template>
 
 <script>
+import TvShow from './TvShow.vue';
+
 export default {
+  components: {
+    TvShow,
+  },
   data() {
     return {
       title: 'Home',
