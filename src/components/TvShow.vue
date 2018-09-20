@@ -7,11 +7,15 @@
       <h3>{{tvShowData.name}}</h3>
       <div v-html="tvShowData.summary"></div>
     </div>
-    <button type-="button" @click="onFavoriteClick"><i class="fa fa-star"></i></button>
+    <button type-="button" @click="onFavoriteClick">
+      <i class="fa fa-star" :class="[isSelected ? 'fa-star--selected' : '']"></i>
+    </button>
   </div>
 </template>
 
 <script>
+import favoriteService from '../services/favorites.services';
+
 export default {
   methods: {
     onFavoriteClick(event) {
@@ -20,6 +24,16 @@ export default {
   },
   props: {
     tvShowData: Object,
+  },
+  data() {
+    return {
+      favoriteList: favoriteService.favorites,
+    };
+  },
+  computed: {
+    isSelected() {
+      return this.favoriteList.find(item => this.tvShowData.id === item.id);
+    },
   },
 };
 </script>
