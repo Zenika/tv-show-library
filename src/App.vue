@@ -7,10 +7,6 @@
         <li>Home</li>
         <li>Favorites</li>
       </ul>
-      <div class="navbar__search">
-        <input type="text" placeholder="search...">
-        <button>Search</button>
-      </div>
     </div>
   </div>
 </template>
@@ -57,27 +53,6 @@ export default {
   padding: 0 10px;
 }
 
-.navbar__search {
-  padding-top: 10px;
-}
-
-.navbar__search input {
-  /* margin-left: 10px; */
-  padding: 10px;
-  background: none;
-  background-color: white;
-  border-radius: 3px;
-  border: solid 1px black;
-}
-
-.navbar__search button {
-  margin: 0 10px;
-  padding: 10px;
-  background: none;
-  border-radius: 3px;
-  font-size: 12px;
-  color: white;
-}
 body {
   margin: 0;
 }
