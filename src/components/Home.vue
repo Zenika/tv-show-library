@@ -12,6 +12,7 @@
 
 <script>
 import TvShow from './TvShow.vue';
+import TvShowService from '../services/tvshow.service';
 
 export default {
   components: {
@@ -20,7 +21,14 @@ export default {
   data() {
     return {
       title: 'Home',
+      TvShows: [],
     };
+  },
+  created() {
+    TvShowService.getTvShow('bad').then((TvShows) => {
+      this.TvShows = TvShows;
+      console.log(TvShows);
+    });
   },
 };
 </script>
