@@ -1,9 +1,11 @@
 <template>
   <div class="tv-show">
-    <img :src="image.url" class="tv-show__image" />
+    <img v-if="tvShowData.image"
+      :src="tvShowData.image.medium"
+      class="tv-show__image" />
     <div class="tv-show__body">
-      <h3>{{name}}</h3>
-      <p>{{summary}}</p>
+      <h3>{{tvShowData.name}}</h3>
+      <div v-html="tvShowData.summary"></div>
     </div>
     <i class="fa fa-star"></i>
   </div>
@@ -11,16 +13,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      name: 'Lord of the rings',
-      summary: 'The best bromance movie ever',
-      image: {
-        url: 'https://goo.gl/x9mk6w',
-      },
-    };
+  props: {
+    tvShowData: Object,
   },
-
 };
 </script>
 
