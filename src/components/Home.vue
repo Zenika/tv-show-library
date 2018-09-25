@@ -3,8 +3,11 @@
     <div class="home-header">
       <h1>{{title}}</h1>
       <div class="search">
-        <input type="text" placeholder="search...">
-        <button>Search</button>
+        <input
+          v-model="searchData"
+          @keyup="loadTvShows(searchData)"
+          type="text" placeholder="search...">
+        <button @click = "searchTvShows()">Search</button>
       </div>
     </div>
     <tv-show
@@ -29,10 +32,11 @@ export default {
       title: 'Home',
       tvShows: [],
       favoriteTvShows: [],
+      searchData: '',
     };
   },
   created() {
-    TvShowService.getTvShow('bad').then((TvShows) => {
+    TvShowService.getTvShow('good').then((TvShows) => {
       this.tvShows = TvShows;
     });
   },
@@ -43,6 +47,11 @@ export default {
       } else {
         favoritesService.addFavorite(tvShow);
       }
+    },
+    loadTvShows(query) {
+      TvShowService.getTvShow(query).then((TvShows) => {
+        this.tvShows = TvShows;
+      });
     },
   },
 };
