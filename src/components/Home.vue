@@ -7,7 +7,7 @@
           v-model="searchData"
           @keyup="loadTvShows(searchData)"
           type="text" placeholder="search...">
-        <button @click = "searchTvShows()">Search</button>
+        <button @click = "loadTvShows()">Search</button>
       </div>
     </div>
     <tv-show
