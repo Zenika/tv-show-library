@@ -1,6 +1,8 @@
 # tv-show-library
 
 ## Project setup
+
+You can use yarn or npm.
 ```
 yarn install
 ```
