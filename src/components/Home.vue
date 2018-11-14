@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="home-header">
-      <h1>{{title}}</h1>
+      <h1>Home</h1>
       <div class="search">
         <input type="text" placeholder="search...">
         <button>Search</button>
@@ -11,17 +11,10 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      title: 'Home',
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
-
 .home-header {
   display: flex;
   width: 70%;
@@ -46,5 +39,4 @@ export default {
   font-size: 12px;
   color: var(--nav-background);
 }
-
 </style>
