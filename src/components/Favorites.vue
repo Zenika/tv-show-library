@@ -6,12 +6,12 @@
       v-for="tvShow in favorites"
       :tvShowData="tvShow"
       :key="tvShow.id"
-  />
+      @favorites-selected = "updateFavorites($event, tvShow)"/>
 </div>
 </template>
 
 <script>
-import favoriteService from '../services/favorites.services';
+import favoritesService from '../services/favorites.services';
 import TvShow from './TvShow.vue';
 
 export default {
@@ -21,13 +21,20 @@ export default {
   data() {
     return {
       title: 'FAVORITES',
-      favorites: favoriteService.favorites,
+      favorites: favoritesService.favorites,
     };
   },
-
+  methods: {
+    updateFavorites(event, tvShow) {
+      if (favoritesService.isFavorite(tvShow)) {
+        favoritesService.removeFavorite(tvShow);
+      } else {
+        favoritesService.addFavorite(tvShow);
+      }
+    },
+  },
 };
 </script>
 
 <style>
-
 </style>
