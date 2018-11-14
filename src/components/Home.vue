@@ -7,6 +7,7 @@
         <button>Search</button>
       </div>
     </div>
+    <tv-show/>
   </div>
 </template>
 
