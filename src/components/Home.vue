@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="home-header">
-      <h1>{{title}}</h1>
+      <h1>Home</h1>
       <div class="search">
         <input type="text" placeholder="search...">
         <button>Search</button>
@@ -12,11 +12,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      title: 'Home',
-    };
-  },
+
 };
 </script>
 
