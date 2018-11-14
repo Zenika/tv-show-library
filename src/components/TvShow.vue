@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       name: 'Lord of the rings',
-      summary: 'The best bromance movie ever',
+      summary: 'This is story about rings and hobbits',
       image: {
         url: 'https://goo.gl/x9mk6w',
       },
